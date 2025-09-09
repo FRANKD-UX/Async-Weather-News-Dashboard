@@ -1,21 +1,35 @@
 {
   "name": "async-weather-news-dashboard",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Node.js TypeScript project demonstrating asynchronous programming patterns",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "callback": "ts-node src/callbackVersion.ts",
+    "promise": "ts-node src/promiseVersion.ts",
+    "async": "ts-node src/asyncAwaitVersion.ts",
+    "clean": "rimraf dist",
+    "test": "npm run callback && npm run promise && npm run async"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FRANKD-UX/Async-Weather-News-Dashboard.git"
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "async",
+    "promises",
+    "callbacks",
+    "weather",
+    "news"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "rimraf": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/FRANKD-UX/Async-Weather-News-Dashboard/issues"
-  },
-  "homepage": "https://github.com/FRANKD-UX/Async-Weather-News-Dashboard#readme"
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
 }
